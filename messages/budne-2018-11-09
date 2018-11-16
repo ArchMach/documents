@@ -1,0 +1,62 @@
+Phil Budne phil at ultimate.com
+Fri Nov 9 21:35:22 EST 2018
+
+> Has there been any attempt to locate the operating system MagicSix
+
+Larry Stewart wrote:
+
+    As far as bits go, I don't have any, although I do have some
+    hand-drawn schematics of the color display I built for the
+    Interdata model 85 and my old undergrad thesis (color printing).
+
+Andy Lipman forwarded my query to Gregory Steve & Paul Mockapetris
+with the prefix "Any ideas for this poor soul?"
+
+Paul Mockapetris wrote:
+
+    I have a few shards of the Magic operating system somewhere, but
+    not nearly enough to make anything interesting run.  I don't know
+    if there's any history or photos from the era.  If anyone has any,
+    I'd love to get them.
+
+    My recollection of the history is that Nicholas forbade any OS
+    work.  So naturally, while he went off for a summer in Patmos, we
+    built one.
+
+    Alternatively, since the Architecture machine was not famous or
+    funded enough at the time, the resources we had were a limited
+    amount of CPU time donated by the IBM Cambridge Scientific Center,
+    some Interdata minicomputers, and a hard drive..  So as I remember
+    it, Steve Gregory and I started some software, while Andy and
+    perhaps Mike did the disk controller and shared I/O bus.  We
+    called the system Magic for Mockapetris and Gregory's Interactive
+    Computer, since we couldn't build an operating system
+
+    Magic 1.0 allowed basically a user per machine with a shared fail
+    system.
+
+    While ludicrous by today's standards, it was probably state of the
+    art at the time.  We could easily have published in the computer
+    science journals of the time, if only we had known we were being
+    cool rather than practical.
+
+    I remember Jim Taggart had some software he was working on that he
+    would keep on multiple paper tapes of source code, then debug and
+    accumulate paper tapes of patches, and then go back and redo the
+    source and rebuild.  The editing and compiling and linking meant a
+    new build from source would take a couple days or more.  Once we
+    had Magic working, Jim could rebuild in 40 minutes or so, mostly
+    with his feet up as the system grinded away.  He was our biggest
+    defender when Nicholas came back from Patmos.  (I also seem to
+    remember a huge sigh of relief when we got the ability to back up
+    the Magic disk drive to mag tape, after I had been backing it up
+    illicitly to an IBM timesharing system via a terminal emulation a
+    scheme at 15 or so characters per second)
+
+    I believe this was the summer of 69 or maybe 70.  I was off after
+    that,
+
+    Anyway, I remember that this stone age stuff was replaced by
+    bronze or iron age versions.  I seem to recall Magic 6.0 with 32
+    bit architecture and a PL/1 compiler, but somebody else will have
+    to tell that story.

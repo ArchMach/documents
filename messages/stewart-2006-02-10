@@ -1,0 +1,33 @@
+Larry Stewart larry.stewart at sicortex.com
+Fri Feb 10 20:36:15 EST 2006
+
+Interdata, wow, that brings back a few memories.  When I was an
+undergraduate
+at MIT I hung out in the predecessor to the Media Lab, called the
+Architecture
+Machine Group.  This was a big Interdata shop.  In 1973 we had a couple of
+model 5's and a model 3, and we soon thereafter got an (amazing to me)
+model 70.
+
+I designed a few interfaces for these things, including a cartridge tape
+controller
+for the Model 70.  Later we got a Model 85  (all semiconductor memory- yow)
+that we built a color frame buffer for.
+
+By 1976 we had a couple of 7/32's complete with microcode bugs. You
+could get the
+microcode into an infinite loop, and thanks to power-save and core
+memory, you couldn't
+get out again, except by unplugging the core module with the machine
+running.  This
+gave a good chance of blowing up the memory card...
+
+Those were very nice machines.  We had our own OS, with swappable device
+drivers.
+One of my first assignments was fitting a driver for the IBM 2741
+printer into 160 hex
+bytes.
+
+But I digress...
+
+-Larry

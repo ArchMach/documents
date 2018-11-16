@@ -1,0 +1,20 @@
+Received: from 40700016315 by MC.LCS.MIT.EDU via Chaosnet; 11 AUG 87  22:15:42 EDT
+Received: by mit-nc.MIT.EDU with sendmail-5.31/4.7 
+	id <AA01051@mit-nc.MIT.EDU>; Tue, 11 Aug 87 21:14:07 EST
+Date: Tue, 11 Aug 87 21:14:07 EST
+From: gill@mit-nc.MIT.EDU (Gill Pratt)
+To: chaos-maint@mc
+Subject: Subnet 34 repaired
+
+
+	I re-attached a connecter out of which a cable had been pulled
+in the 5th floor building 36 phone closet. In the process of tracking
+down the trouble, I also removed the loop of subnet 34 that used to
+go to ARCMAC, so subnet 34 now only goes to buildings 20, 36, and 38.
+
+Thanks to Mike McIlrath and Telecommunications for help and keys,
+respectively.
+
+	- Gill
+
+

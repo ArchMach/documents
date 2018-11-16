@@ -1,0 +1,33 @@
+Received: by MEDIA-LAB.MIT.EDU (5.31/4.8)  id AA21245; Tue, 8 Jul 86 21:41:49 EDT
+Date: Tue, 8 Jul 1986  21:29 EDT
+Message-Id: <CCS.TMRC.MAP.12221169587.BABYL@MIT-OZ>
+From: CCS.TMRC.MAP%OZ.AI.MIT.EDU@XX.LCS.MIT.EDU
+To: "David A. Levitt" <levitt@MEDIA-LAB.MIT.EDU>
+Cc: MAP@AI.AI.MIT.EDU
+Subject: MazeWars - history of? ; Mac version
+In-Reply-To: Msg of 7 Jul 1986  14:45-EDT from David A. Levitt <levitt at MEDIA-LAB.MIT.EDU>
+
+*** EOOH ***
+Date: Tue, 8 Jul 1986  21:29 EDT
+From: CCS.TMRC.MAP%OZ.AI.MIT.EDU@XX.LCS.MIT.EDU
+To: "David A. Levitt" <levitt@MEDIA-LAB.MIT.EDU>
+Cc: MAP@AI.AI.MIT.EDU
+Subject: MazeWars - history of? ; Mac version
+In-Reply-To: Msg of 7 Jul 1986  14:45-EDT from David A. Levitt <levitt at MEDIA-LAB.MIT.EDU>
+
+
+I remember playing MAzeWars between multiple IMLAC computers at both the MIT
+Architecture Machine Group and at Project MAC around 1974.  At that time it
+was not used much since it was old hat and evrybody at been hacked out on it.
+The IMLACs were vector graphics single user computers several of which would
+use some common machine to act as control (it just passed messages, didn't
+actually participate).  In the case of ArchMach the host was an Interdata
+machine running the MAGIC operating system, at Project MAC (now LCS) the
+host was a PDP-10 (MIT-DM) running ITS.  It was said that the version on the
+PDP-10 could use the network to allow multiple net hosts to act together as
+one control and that Stanford (or someone out west anyway) also had an
+implementation and that cross-country games had been played.  The rumor was
+that this was stopped when ARPA noticed that more than 50% (the number may
+be apocryphal) of the traffic during some period was cross-country MazeWar
+packets.
+

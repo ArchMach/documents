@@ -1,0 +1,21 @@
+Received: from mit-ems.ARPA by MIT-MC.ARPA 17 Jun 85 22:49:17 EST
+Received: by mit-ems.ARPA (4.12/4.8)  id AA00540; Mon, 17 Jun 85 22:48:00 edt
+Date: Mon, 17 Jun 85 22:48:00 edt
+From: Steven Haflich <smh@mit-ems.ARPA>
+Message-Id: <8506180248.AA00540@mit-ems.ARPA>
+To: CSTACY@MIT-MC.ARPA, INFO-HOSTS@MIT-MC.ARPA
+Subject: ZAXXON and XEVIOUS
+
+These machines are 3600's in E15, the new Media Lab.  The building
+connects to the campus spine, thus is Internet.  There are a couple
+Chaos hosts in the building which can (and occasionally do)
+communicate, but there is no Chaos connection to the outside world.
+
+It may be in the future that the MINITS bridge ARCMAC-HUB will get
+reconstituted in order to connect the ARCMAC Magic-6 hosts to
+the real world again.  If so, it might be necessary to boot it from
+MIT-EMS, which is also in the building, and if so, MIT-EMS might
+then assume MIT-MC's chaos address -- it's easier than cutting a
+new rom for ARCMAC-HUB.  For this and other reasons, we chose not
+to publicise chaos hackery within E15.  No one outside should ever
+see any of it.
