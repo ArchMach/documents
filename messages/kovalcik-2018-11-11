@@ -1,0 +1,28 @@
+From: Rick Kovalcik
+Date: Sun, 11 Nov 2018 08:00:59 -0500 (4 days, 22 hours, 50 minutes ago)
+
+I agree with what most of Ted said except the way I got involved in ArchMac.
+Which matters little to this story:
+
+ I got involved (in Fall 1975 IIRC) through UROP to work on the ArchMach
+ graphics project to do drawing recognition. That project probably had a
+ more interesting name. I was involved in a subset of it to do something
+ like "Latch" where you take endpoints that are close together and the
+ user probably mean to be the same and actually join them up. My memory of
+ that is fuzzy other than I remember part of it was one of the first times
+ I wrote a UI and my UI sucked. (Every time you ran the program, the user
+ was presented with "Please type in the 40 parameters."). Steve Mann and
+ Chris Herot were the primary staff members involved with the project I
+ was brought on board to do.
+ I eventually moved to working on working user space utilities as Ted
+ notes.
+
+Also, I think Ted also wrote a text formatter similiar to runoff. I forget
+the name of that, but perhaps this would jog Ted's memory.
+
+As to actual source code? If there aren't backups at the MediaLab somewhere
+or possibly on some old Multics backup tape, I have no idea. But as Ted said,
+even if you find them, good luck reading them.
+
+I hope this helps a little. If you think of more questions, please let me
+know.

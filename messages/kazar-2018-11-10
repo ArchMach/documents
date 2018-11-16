@@ -1,0 +1,125 @@
+From: Michael Kazar
+Date: Sat, 10 Nov 2018 13:13:07 -0500 (5 days, 17 hours, 37 minutes ago)
+
+Hi Lars,
+
+I do wish I had a copy of the OS sources -- it would be cool to boot
+it up on a simulator.  But unless someone at the Media lab actually
+has them, they're probably gone for good.
+
+Here's what I can tell you about the system.  The original Magic was a
+single user disk operating system for Interdata computers (the model
+7/32 and 8/32 stick in my head, but I think they also had some older
+16 bit systems, perhaps called a 7/16).  There was a vector graphics
+display attached to each (Imlac?).  When I got there in 1975, the OS
+version was 4, i.e. Magic 4, which I think was spelled M.A.G.I.C. for
+Mockapetris and Gregory's Interactive Computer (Paul Mockapetris and
+Steve Gregory).  Paul later distinguished himself by inventing
+(according to InternetHallOfFame.org) the DNS name system.
+
+There were only about 3-4 computers at the Architecture Machine Group
+(predecessor of the MIT Media Lab), and Seth Steinberg and perhaps
+some others thought that it would be cool if we had a time sharing
+system so that more than 3-4 people could get work done
+simultaneously.  So, I was hired to write the kernel and utilities of
+a new operating system.  The Interdata 7/32 had a segmented address
+space (16 segments of some relatively small size, perhaps as little as
+64K each - I don't recall the exact amount of memory a segment could
+grow to).  Each segment could be present or not in memory, so we
+thought that we could write a VM system for it that would swap out
+relatively unused segments (more about that in a bit).  So, the main
+direction I got was, paraphrasing, "write us a time sharing operating
+system for the Interdata 7/32, and make it look at much like Multics
+as you can."  At the time, I was just starting my sophomore year at
+MIT, to give you a rough idea of my qualifications for a job of this
+scope.  This was as UROP project (undergraduate research opportunities
+program), so I was offered academic credit or pay, and I took the pay,
+since $3.25/hour was much better than I could get at the dining hall
+at the time.
+
+Seth Steinberg had written a PL/1 compiler for this machine, and so
+the OS was going to be mostly written in PL/1.  I don't recall the
+timing of writing the thing, except that I spent about 20 hours/week
+during the term, and about 60 hours a week during the summer working
+on it, and it was usable by outside people relatively quickly (within
+a year, I'd guess).  As part of this work, I wrote a text editor
+called 'tv' that wasn't extensible at all, but had an emacs-like
+command set.
+
+Around this time or a few months later, Ted Anderson was hired. I'm
+not sure if it was to write a better text editor, or a Lisp
+interpreter (someone wrote a Lisp, but I can't recall if it was Ted or
+someone else) or both.  He ended up writing SINE (SINE Is Not Eine),
+which was extensible in Lisp.  It may have been written entirely in
+Lisp, but I don't recall, but Ted can no doubt tell you.
+
+Some oddities about the 7/32 machine. Although it did indeed have a
+present/not present bit on each segment, once we started running our
+operating system on the machine, we discovered some unpleasant facts
+about the machine.  First, after a 'segment not present' fault, the
+instruction pointer (IP) was left pointing *after* the faulting
+instruction, which means we had to back up 2, 4 or 6 bytes to find the
+instruction that faulted and had to be resumed. IIRC, 2 byte
+instructions never generated faults, but 4 and 6 byte instructions
+both could, so we had to ensure that the compiler never generated 4
+byte instructions that started with 0x4800 (which was some sort of
+store from register 0), since that also looked like the middle of a 6
+byte instruction.  Shortly after discovering this mess, we also
+discovered the reason for the IP being updated was that the processor
+actually executed the instruction, even though the data in memory
+wasn't available, using random bits as the operand.  More
+modifications to the compiler came, so that we never executed
+instructions that couldn't be repeatedly executed safely.   So, for
+example, you could do "load r0, 20(r1)" meaning add 20 to the contents
+of register r1, and use that as an address of a 32 bit word and load
+that into r0, since if you had to reexecute it, you'd just overwrite
+r0 again.  But "load r1, 20(r1)" would mess things up, since you'd
+have trashed r1 if  you executed the instruction with garbage data due
+to a segment not present fault.  Similarly, you couldn't do "add r1,
+20(r2)" since you'd have added garbage to r1 on a faulting
+instruction, and so couldn't recover to the original state.
+
+My recollection is that Seth modified the PL/1 compiler to avoid all
+of these issues.  Before that, if the system was heavily loaded and a
+missing segment fault occurred at the right time, the system would
+raise a "bad_luck" fault, meaning that the OS couldn't automatically
+restart the program.  My recollection is that it was the PL/1 compiler
+itself, which was written in assembly language, which generated most
+of the issues, since it wasn't written in PL/1.  At some point I think
+we just locked the compiler in memory when it was running.
+
+Also, initially every time you ran a command, it mapped (initiated, in
+Multics terms) the command file into a segment, and then called its
+main entry point.  Since the I7/32 only had 16 segments, that was an
+issue, since you'd run out of segments after about 14 unique commands
+(two segments were consumed by the OS and command shell), and at some
+point I modified the command shell to switch to a new address space
+for each new command.
+
+At some point near my junior or senior year, we became aware of a fix
+for the 'segment not present' execution problems from Bell Northern in
+Canada somewhere.  The I 7/32 had (at least) two register sets, one
+intended for the OS to use.  The fix wired up the 'not present' line
+from the memory controller to the register set selector, so that when
+a fault was generated, the processor switched to a different register
+set early enough, so that the instruction's execution damaged a spare
+register set, and we could restart any instructions (4 byte
+instructions instructions starting 0x4800).  As I recall, we applied
+this fix to all of our systems.  Someone suggested labeling the switch
+that enabled the fix "magic / more magic" in homage to the switch on
+some other system at MIT, which apparently you know more about than I
+do.
+
+Eventually the Interdata 8/32 came out that didn't have this flaw at
+all.  I was hired as as consultant late in 1978 or early 1979, during
+my first year in grad school in Pittsburgh, to port MagicSix to the
+new machine.  It didn't take very long (I think I got it done in under
+as week).  The 8/32 may also have had more segments in the address
+space; I'm not sure.
+
+That's most of my memory about that system.  I asked Andy Lipmann at
+the Media Lab if he has a copy of MagicSix sources.  I wouldn't get my
+hopes up, though; the Media lab switched to Unix systems a few years
+after I graduated :-)
+
+    Mike

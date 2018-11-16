@@ -1,0 +1,46 @@
+From: Ted Anderson
+Date: Sat, 10 Nov 2018 23:12:42 -0800 (5 days, 4 hours, 37 minutes ago)
+
+Mike, Thanks for these details which bring back many memories.
+
+Lars, I have a couple of details to add, but my memory for this sort
+of thing is usually pretty rough.  Rick Kovalcik usually can recall
+lots more details than I can, and perhaps he can add to this
+discussion.
+
+I think there were at least two editors I wrote: Tint (TINT is not
+TECO)[3] and Sine (Sine is not Emacs).  The former had a very crude
+extension language somewhat like TECO, the latter was mostly or
+entirely written in a lisp-like implementation language.  But the
+details are fuzzy now.  I'd recommends Craig Finseth's document[1],
+and I recall his thesis (and a book) investigated this whole area of
+history.  My thesis was about the editor writing project and so the
+details could be gleaned there[2].
+
+It looks like Mike's thesis on "Dynamic linking in a small address
+space" is not in DSpace, but only available at Barton Library.
+
+My recollection is that Rick and I started at the ArchMac working for
+Seth to write user space utilities to help users access the earlier
+Magic systems and eventually MagicSix that Mike was developing.
+
+I also wrote Lisp interpreter that Craig Reynolds used for his early
+animation work.  But I believe the effort to merge Sine and Lisp on
+this system was considered but never completed.  My recollection was
+the Bernie Greenberg implemented Multics Emacs and maybe Lisp there
+too, and Dan Weinreb implemented Eine on the Lisp Machine.  I'm no
+longer clear on the timing of these efforts, but there was
+considerable interaction between them.
+
+I'm afraid none of these details get you any closer to source or
+binary code for MagicSix.  Rick may have some ideas where old backups
+might be found.  The problem is that even if such a thing exists
+somewhere, it is likely to be on a reel of 9-track magnetic tape...
+
+HtH,
+Ted
+
+[1] http://www.finseth.com/emacs.html#137
+[2] https://dspace.mit.edu/handle/1721.1/16038
+[3]
+https://en.wikipedia.org/wiki/Recursive_acronym#Computer-related_examples

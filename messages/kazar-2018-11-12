@@ -1,0 +1,30 @@
+From: Michael Kazar
+Date: Mon, 12 Nov 2018 08:27:43 -0500 (3 days, 22 hours, 24 minutes ago)
+
+It's hard for me to put myself back in the brain of 19 year old Mike Kazar.
+But as Rick said, MagicSix was a completely new OS, so, I figured we could
+generate our own typography/logo.
+
+As to why we went to version 6, I can't be certain. But if I had to bet on
+something, it would be that it's an homage to The Prisoner, which at the time
+was by far the most surrealistic show on TV, and very popular with people I
+hung out with. I have a very vague recollection of The Prisoner logo, with a
+'6' on the large wheel of the bicycle, as a disk pack label, as well. For
+example,
+https://www.zazzle.co.uk/the_prisoner_number_6_10_cm_round_badge-145884569340698405
+
+
+I don't remember exactly what subset of PL/1 that Seth's compiler
+implemented, but my vague recollection was that PL/1's 'controlled' storage
+class wasn't implemented (reading docs now, controlled storage is clearly a
+bizarre feature that I'm guessing never made it into any other language). The
+PL/1 subset was sort of like what you'd find in C today, pointers, static
+variables and locals.
+
+I don't recall any specific ITS influence -- MagicSix was primarily
+influenced by stealing as many ideas from Multics as we could figure out how
+to implement on an Interdata. But ITS, Multics and MagicSix hackers all hung
+out together, and I don't doubt there was all sorts of cross-pollination, and
+I'm sure we borrowed ideas from ITS as well.
+
+Mike
